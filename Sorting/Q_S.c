@@ -10,6 +10,7 @@ void print(int a[])
         printf("%d ", a[i]);
     }
 }
+
 void quicksort(int a[], int first, int last)
 {
     int i, j, temp, pivot;
@@ -25,7 +26,6 @@ void quicksort(int a[], int first, int last)
 
             while (a[j] > a[pivot])
                 j--;
-
             if (i < j)
             {
                 temp = a[i];

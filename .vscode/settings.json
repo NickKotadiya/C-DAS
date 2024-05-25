@@ -1,0 +1,8 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "LOOPA_A.C": "cpp",
+        "LOOPSEC.C": "cpp",
+        "LOOP1_5.C": "cpp"
+    }
+}

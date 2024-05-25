@@ -13,6 +13,9 @@ int main()
 
     return 0;
 }*/
+
+/***************************************************************/
+
 /*#include <stdio.h>
 #include <stdlib.h>
 
@@ -61,6 +64,9 @@ int main() {
 
     return 0;5
 }*/
+
+/***************************************************************/
+
 /*#include<stdio.h>
  int main ()
 {
@@ -89,6 +95,8 @@ int main() {
         printf("no it is not present");
     }
 }*/
+
+/***************************************************************/
 
 /*#include <stdio.h>
 int main()
@@ -121,6 +129,8 @@ int main()
     }
     return 0;
 }*/
+
+/***************************************************************/
 
 /*#include <stdio.h>
 int main()
@@ -171,6 +181,8 @@ while (low <= high)
     return 0;
 }*/
 
+/***************************************************************/
+
 /*#include<stdio.h>
 #include<stdlib.h>
 int a[10];
@@ -219,6 +231,8 @@ int main()
     return 0;
 }*/
 
+/***************************************************************/
+
 /*#include<stdio.h>
 #define n 5
 int a[n] , f =-1 , r =-1;
@@ -262,7 +276,7 @@ int display()
     for (int i = f; i <= r; i++)
     {
         printf("%d ,",a[i]);
-    }   
+    }
 }
 
 int main()
@@ -275,8 +289,10 @@ int main()
     display();
 }*/
 
+/***************************************************************/
 // quick sort
-#include<stdio.h>
+
+/*#include<stdio.h>
 #include<stdlib.h>
 int n;
 void print(int a[])
@@ -327,4 +343,56 @@ int main()
     quicksort(a,0,n-1);
     printf("\n after quick sort:");
     print(a);
+}*/
+
+/***************************************************************/
+
+// Linked list implementation in C
+
+#include <stdio.h>
+#include <stdlib.h>
+
+// Creating a node
+struct node
+{
+    int value;
+    struct node *next;
+};
+
+// print the linked list value
+void printLinkedlist(struct node *p)
+{
+    while (p != NULL)
+    {
+        printf("%d ", p->value);
+        p = p->next;
+    }
+}
+
+int main()
+{
+    // Initialize nodes
+    struct node *head;
+    struct node *one = NULL;
+    struct node *two = NULL;
+    struct node *three = NULL;
+
+    // Allocate memory
+    one = malloc(sizeof(struct node));
+    two = malloc(sizeof(struct node));
+    three = malloc(sizeof(struct node));
+
+    // Assign value values
+    one->value = 1;
+    two->value = 2;
+    three->value = 3;
+
+    // Connect nodes
+    one->next = two;
+    two->next = three;
+    three->next = NULL;
+
+    // printing node-value
+    head = one;
+    printLinkedlist(head);
 }
